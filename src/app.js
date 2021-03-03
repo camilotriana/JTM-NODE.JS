@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const morgan = require('morgan');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passportLocal = require('passport-local').Strategy;
+
 
 //Settings
 app.set('port',3000);
@@ -12,6 +17,32 @@ app.set('view engine','ejs');
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}));
 
+//Settings Segurity-Login
+app.use(cookieParser('admin@12345'));
+app.use(session({
+    secret: 'admin@12345',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new passportLocal(function(username,password,done){
+    if(username==='admin' && password==='12345'){
+        return done(null,{id:1,name:"Administrador"});
+    }
+    else{
+        return done(null,false);
+    }
+}));
+
+passport.serializeUser(function(user,done){
+    done(null,user.id);
+});
+
+passport.deserializeUser(function(id,done){
+    done(null,{id:1,name:"Administrador"});
+})
 //Routes
 app.use(require('./routes/routes'));
 
