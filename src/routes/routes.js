@@ -6,6 +6,10 @@ router.get('/',(req,res)=>{
     res.render('index.ejs');
 });
 
+router.get('/consult',(req,res)=>{
+    res.render('consult.ejs');
+});
+
 router.get('/register',(req,res,next)=>{
     if(req.isAuthenticated()){
         return next();
@@ -26,4 +30,8 @@ router.post('/login',passport.authenticate('local',{
     failureRedirect:"/login"
 }));
 
+router.get('/Logout',(req,res)=>{
+    req.logOut();
+    res.redirect('/');
+});
 module.exports = router;
