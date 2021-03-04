@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+    <div class="container">
+        <%- include('static/navigation.ejs');%>
+            <br>
+            <form id="formularioConsulta" method="POST">
+                <h3>ESTADO DEL DISPOSITIVO</h3>
+                <hr>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="cserial">Ingrese el serial del dispositivo:</label>
+                        <input type="text" id="cserial" name="cserial" class="form-control" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <button id="bconsulta" type="submit" class="btn btn-primary btn-block">CONSULTAR</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>

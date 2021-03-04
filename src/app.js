@@ -6,7 +6,8 @@ const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passportLocal = require('passport-local').Strategy;
-
+const user = "camilo_triana";
+const pass = "Camilo@12345";
 
 //Settings
 app.set('port',3000);
@@ -28,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new passportLocal(function(username,password,done){
-    if(username==='admin' && password==='12345'){
+    if(username===user && password===pass){
         return done(null,{id:1,name:"Administrador"});
     }
     else{
