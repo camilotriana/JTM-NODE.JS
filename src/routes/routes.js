@@ -56,6 +56,21 @@ router.get('/delete', (req, res, next) => {
     });
 });
 
+router.get('/information', (req, res, next) => {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    else {
+        res.redirect('/login');
+    }
+}, (req, res) => {
+    res.render('information.ejs', {
+        clients,
+        inventorys,
+        jobs
+    });
+});
+
 router.get('/login', (req, res) => {
     res.render('login.ejs');
 });
@@ -205,12 +220,17 @@ router.get('/deleteWork/:id', (req, res) => {
 
 router.post('/consultState', (req, res) => {
     const {serial} = req.body;
-    const consultSerial = inventorys.filter(inv => inv.Serial === serial);
+    consultSerial = inventorys.find(inv => inv.Serial === serial);
     if(consultSerial){
-        res.status(400).send(consultSerial);
+        res.send('<h1>Tipo de Dispositivo: '+consultSerial.TipoDispositivo+
+                 '<br>Marca: ' + consultSerial.Marca+
+                 '<br>Referencia: '+consultSerial.Referencia+
+                 '<br>Serial: ' + consultSerial.Serial+
+                 '<br>Estado: ' + consultSerial.Estado +'</h1>'
+                 );
     }
     else{
-        res.status(400).send("ERROR");
+        res.status(400).send('El dispositivo no existe');
     }
 });
 
