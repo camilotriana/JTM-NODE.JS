@@ -1,17 +1,1 @@
-[
-    {
-        "Nombre":"Luis",
-        "Apellido":"Sanchez",
-        "Documento":"1"
-    },
-    {
-        "Nombre":"Carlos",
-        "Apellido":"Ramirez",
-        "Documento":"2"
-    },
-    {
-        "Nombre":"Pedro",
-        "Apellido":"Chia",
-        "Documento":"3"
-    }
-]
+[{"nombre":"Camilo","apellido":"Andres","documento":"1"},{"nombre":"Miguel","apellido":"Palacios","documento":"2"}]
