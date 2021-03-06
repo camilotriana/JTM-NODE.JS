@@ -9,20 +9,13 @@
     <div class="container">
         <%- include('static/navigation.ejs');%>
             <br>
-            <form id="formularioConsulta" method="POST">
-                <h3>ESTADO DEL DISPOSITIVO</h3>
-                <hr>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="cserial">Ingrese el serial del dispositivo:</label>
-                        <input type="text" id="cserial" name="cserial" class="form-control" required>
-                    </div>
+            <form id="formularioConsulta" method="POST" action="/consultState">
+                <div class="mb-3">
+                    <label for="serial" class="form-label">INGRESE EL SERIAL DEL DISPOSITIVO:</label>
+                    <input type="text" class="form-control" id="serial" name="serial" required>
                 </div>
-                <br>
-                <div class="form-row">
-                    <div class="col-md-12">
-                        <button id="bconsulta" type="submit" class="btn btn-primary btn-block">CONSULTAR</button>
-                    </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary ">CONSULTAR</button>
                 </div>
             </form>
     </div>

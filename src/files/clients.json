@@ -1,1 +1,17 @@
-[{"nombre":"Camilo","apellido":"Andres","documento":"1"},{"nombre":"Miguel","apellido":"Palacios","documento":"2"}]
+[
+    {
+        "Nombre": "Camilo",
+        "Apellido": "Andres",
+        "Documento": "1"
+    },
+    {
+        "Nombre": "Miguel",
+        "Apellido": "Palacios",
+        "Documento": "2"
+    },
+    {
+        "Nombre": "Daniel",
+        "Apellido": "Manrique",
+        "Documento": "3"
+    }
+]
