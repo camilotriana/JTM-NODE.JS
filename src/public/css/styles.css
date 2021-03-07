@@ -1,3 +1,21 @@
 #navegacion{
     margin-left: auto;
 }
+#botonC{
+    width: 100%;
+    background-color: #212529;
+    border-color: greenyellow;
+    font-size: 120%;
+}
+#menu{
+    font-size: 20px;
+}
+#empresa{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#groupBotones{
+    background-color: #212529;
+    border-color: greenyellow;
+    font-size: 200%;
+}

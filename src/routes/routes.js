@@ -19,6 +19,10 @@ router.get('/consult', (req, res) => {
     res.render('consult.ejs');
 });
 
+router.get('/contact', (req, res) => {
+    res.render('contact.ejs');
+});
+
 router.get('/register', (req, res, next) => {
     if (req.isAuthenticated()) {
         return next();
@@ -99,14 +103,13 @@ router.post('/addClient', (req, res) => {
         "Documento": documento
     }
 
-    const consulta = clients.find(lista => lista.documento === documento);
+    const consulta = clients.find(lista => lista.Documento === documento);
     if (consulta) {
-        res.status(400).send('El cliente ya existe');
+        res.status(400).send('<h1>El cliente ya existe</h1>');
     }
     else {
         clients.push(newClient);
     }
-
 
     const jsonClients = JSON.stringify(clients);
     fs.writeFileSync('src/files/clients.json', jsonClients, 'utf-8');
@@ -134,7 +137,7 @@ router.post('/addInventory', (req, res) => {
 
     const consulta = inventorys.find(lista => lista.Serial === serial);
     if (consulta) {
-        res.status(400).send('El dispositivo ya existe');
+        res.status(400).send('<h1>El dispositivo ya existe<h1>');
     }
     else {
         inventorys.push(newInventory);
@@ -171,7 +174,7 @@ router.post('/addWork', (req, res) => {
     const consulta3 = clients.find(lista => lista.Documento === documento);
 
     if (consulta) {
-        res.status(400).send('El trabajo ya existe');
+        res.status(400).send('<h1>El trabajo ya existe</h1>');
     }
     else {
         if (consulta2) {
@@ -179,12 +182,12 @@ router.post('/addWork', (req, res) => {
                 jobs.push(newWork);
             }
             else {
-                res.status(400).send('El cliente no existe');
+                res.status(400).send('<h1>El cliente no existe</h1>');
             }
 
         }
         else {
-            res.status(400).send('El dispositivo no existe');
+            res.status(400).send('<h1>El dispositivo no existe</h1>');
         }
     }
 
@@ -198,7 +201,7 @@ router.post('/addWork', (req, res) => {
 });
 
 router.get('/deleteClient/:documento', (req, res) => {
-    clients = clients.filter(client => client.documento != req.params.documento);
+    clients = clients.filter(client => client.Documento != req.params.documento);
     const jsonClients = JSON.stringify(clients);
     fs.writeFileSync('src/files/clients.json', jsonClients, 'utf-8');
     res.redirect('/delete');
@@ -230,9 +233,11 @@ router.post('/consultState', (req, res) => {
                  );
     }
     else{
-        res.status(400).send('El dispositivo no existe');
+
+        res.status(400).send('<h1>El dispositivo no existe</h1>');
     }
 });
+
 
 module.exports = router;
 

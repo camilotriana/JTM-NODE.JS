@@ -9,11 +9,13 @@
     <div class="container">
         <%- include('static/adminNavigation.ejs');%>
             <br><br><br><br><br>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" onclick="location.href='/add';" type="button">AGREGAR
+            <div class="d-grid gap-3 col-8 mx-auto">
+                <hr>
+                <button id="groupBotones" class="btn btn-primary" onclick="location.href='/add';" type="button">AGREGAR
                     INFORMACION</button>
-                <button class="btn btn-primary" onclick="location.href='/information';" type="button">VER INFORMACION</button>
-                <button class="btn btn-primary" onclick="location.href='/delete';" type="button">ELIMINAR INFORMACION</button>
+                <button id="groupBotones" class="btn btn-primary" onclick="location.href='/information';" type="button">VER INFORMACION</button>
+                <button id="groupBotones" class="btn btn-primary" onclick="location.href='/delete';" type="button">ELIMINAR INFORMACION</button>
+                <hr>
             </div>
     </div>
     <%- include('static/footer.ejs');%>

@@ -24,7 +24,8 @@
                 <div class="tab-content col-md-9" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="deleteClient" role="tabpanel"
                         aria-labelledby="v-pills-home-tab">
-                        <h3>CIENTES:</h3>
+                        <h3>CIENTES</h3>
+                        <hr>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -40,14 +41,15 @@
                                     <td><%- client.Nombre %></td>
                                     <td><%- client.Apellido %></td>
                                     <td><%- client.Documento %></td>
-                                    <td><a href="/deleteClient/<%- client.documento %>" class="btn btn-danger">ELIMINAR</a></td>
+                                    <td><a href="/deleteClient/<%- client.Documento %>" class="btn btn-danger">ELIMINAR</a></td>
                                 </tr>
                                 <% }) %>
                             </tbody>
                         </table>
                     </div>
                     <div class="tab-pane fade" id="deletePrint" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                        <h3>DISPOSITIVOS:</h3>
+                        <h3>DISPOSITIVOS</h3>
+                        <hr>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -74,7 +76,8 @@
                         </table>
                     </div>
                     <div class="tab-pane fade" id="deleteWork" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                        <h3>TRABAJOS:</h3>
+                        <h3>TRABAJOS</h3>
+                        <hr>
                         <table class="table">
                             <thead>
                                 <tr>

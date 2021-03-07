@@ -1,17 +1,1 @@
-[
-    {
-        "Nombre": "Camilo",
-        "Apellido": "Andres",
-        "Documento": "1"
-    },
-    {
-        "Nombre": "Miguel",
-        "Apellido": "Palacios",
-        "Documento": "2"
-    },
-    {
-        "Nombre": "Daniel",
-        "Apellido": "Manrique",
-        "Documento": "3"
-    }
-]
+[{"Nombre":"Camilo","Apellido":"Andres","Documento":"1"},{"Nombre":"Miguel","Apellido":"Palacios","Documento":"2"},{"Nombre":"Daniel","Apellido":"Manrique","Documento":"3"},{"Nombre":"Javier","Apellido":"Rodriguez","Documento":"4"},{"Nombre":"Rosas","Apellido":"Marquez","Documento":"7"}]

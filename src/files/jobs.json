@@ -1,10 +1,1 @@
-[
-    {
-        "Id": "4",
-        "SerialDispositivo": "1111A",
-        "DocumentoCliente": "2",
-        "Descripcion": "purga cabezales",
-        "Fecha": "2021-03-10",
-        "Precio": "34211"
-    }
-]
+[{"Id":"4","SerialDispositivo":"1111A","DocumentoCliente":"2","Descripcion":"purga cabezales","Fecha":"2021-03-10","Precio":"34211"},{"Id":"2","SerialDispositivo":"1111A","DocumentoCliente":"1","Descripcion":"purga cabezales","Fecha":"2021-03-15","Precio":"40000"}]

@@ -8,19 +8,19 @@
 <body>
     <div class="container">
         <%- include('static/navigation.ejs');%>
-            <br>
+            <br><br><br><br>
             <form id="formularioConsulta" method="POST" action="/consultState">
-                <div class="mb-3">
-                    <label for="serial" class="form-label">INGRESE EL SERIAL DEL DISPOSITIVO:</label>
-                    <input type="text" class="form-control" id="serial" name="serial" required>
-                </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary ">CONSULTAR</button>
+                <div class="row justify-content-md-center">
+                    <div class="mb-3 col-md-7">
+                        <label for="serial" class="form-label">INGRESE EL SERIAL DEL DISPOSITIVO:</label>
+                        <input type="text" class="form-control" id="serial" name="serial" required>
+                    </div>
+                    <br>
+                    <div class="mb-3 col-md-7">
+                        <button id="botonC" type="submit" class="btn btn-primary ">CONSULTAR</button>
+                    </div>
                 </div>
             </form>
-            <div>
-               
-            </div>
     </div>
     <%- include('static/footer.ejs');%>
 </body>
